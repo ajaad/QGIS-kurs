@@ -18,7 +18,7 @@
       <rule symbol="8" filter="ARTYPE = 50 AND ARVEGET IN (54, 99)" key="{c7a5cf10-0b4f-4bc8-b786-69989f09a6de}" label="Snaumark, middels frisk vegetasjon"/>
       <rule symbol="9" filter="ARTYPE = 50 AND ARVEGET IN (52, 53)" key="{5e3aa612-f338-4444-8a5f-1265beb220e9}" label="Snaumark, skrinn vegetasjon"/>
       <rule symbol="10" filter="ARTYPE = 60 AND ARTRESLAG != 39" key="{62834c41-9de8-4add-b22d-620a970f8646}" description="ARTYPE = 60 AND ARTRESLAG != 39" label="Myr med skog"/>
-      <rule symbol="11" filter="ARTYPE = 60 AND ARTRESLAG 39" key="{107af578-9651-42b8-8779-9457733ce1c6}" label="Åpen myr"/>
+      <rule symbol="11" filter="ARTYPE = 60 AND ARTRESLAG =  39" key="{107af578-9651-42b8-8779-9457733ce1c6}" label="Åpen myr"/>
       <rule symbol="12" filter="ARTYPE = 50 AND ARVEGET = 51" key="{e1a6a80e-8ea1-4d5c-9675-a698fd22396f}" label="Bart fjell og blokkmark"/>
       <rule symbol="13" filter="ARTYPE = 10" key="{5a23e699-4867-4fe7-b030-295515e0fe54}" label="Bebygd og samferdsel"/>
       <rule symbol="14" filter="ARTYPE = 70" key="{e95ce107-7506-43ce-8824-099e51d1cd20}" label="Snøisbre"/>

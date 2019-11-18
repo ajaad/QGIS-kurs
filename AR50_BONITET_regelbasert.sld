@@ -331,8 +331,18 @@
           <se:Description>
             <se:Title>Åpen myr</se:Title>
           </se:Description>
-          <!--Parser Error: 
-syntax error, unexpected NUMBER_INT, expecting $end - Expression was: ARTYPE = 60 AND ARTRESLAG 39-->
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsEqualTo>
+                <ogc:PropertyName>ARTYPE</ogc:PropertyName>
+                <ogc:Literal>60</ogc:Literal>
+              </ogc:PropertyIsEqualTo>
+              <ogc:PropertyIsEqualTo>
+                <ogc:PropertyName>ARTRESLAG</ogc:PropertyName>
+                <ogc:Literal>39</ogc:Literal>
+              </ogc:PropertyIsEqualTo>
+            </ogc:And>
+          </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#bfbaf0</se:SvgParameter>
