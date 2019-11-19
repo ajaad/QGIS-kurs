@@ -475,8 +475,12 @@
           <se:Description>
             <se:Title>Annet</se:Title>
           </se:Description>
-          <!--Parser Error: 
-syntax error, unexpected ELSE - Expression was: ELSE-->
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>ARTYPE</ogc:PropertyName>
+              <ogc:Literal>ELSE</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffffff</se:SvgParameter>

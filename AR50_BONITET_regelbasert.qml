@@ -6,25 +6,25 @@
     <Searchable>1</Searchable>
   </flags>
   <renderer-v2 forceraster="0" type="RuleRenderer" enableorderby="0" symbollevels="0">
-    <rules key="{536a9279-cfec-4860-8b84-de21c67ead2a}">
-      <rule symbol="0" key="{e3e9e2fb-5700-4cd1-a031-a4cf243b5dde}" filter="ARTYPE = 20 AND ARJORDBR &lt;> 25" label="Fulldyrka- og overflatedyrka jord"/>
-      <rule symbol="1" key="{43d9681c-9050-49ec-b26d-1a08803f0a39}" filter="ARTYPE = 20 AND ARJORDBR = 25" label="Innmarksbeite"/>
-      <rule symbol="2" key="{2433f139-dcf8-4056-abaa-9448ce002266}" filter="ARTYPE = 30 AND ARSKOGBON = 18" label="Skog, høg og særs høg bonitet"/>
-      <rule symbol="3" key="{aba419d8-bd82-4049-8717-36378343696c}" filter="ARTYPE = 30 AND ARSKOGBON = 13" label="Skog, middels bonitet"/>
-      <rule symbol="4" key="{6a68cc4d-039c-4363-b687-00af3911bbfa}" filter="ARTYPE = 30 AND ARSKOGBON = 12" label="Skog, låg bonitet"/>
-      <rule symbol="5" key="{b5d8a015-6e98-45c7-b7fc-9d832236b9b9}" filter="ARTYPE = 30 AND ARSKOGBON = 11" label="Skog, impediment"/>
-      <rule symbol="6" key="{5da836cb-2ce4-4c45-8c9e-d67e5eafd46a}" filter="ARTYPE = 30 AND ARSKOGBON = 99" label="Skog, ikke registrert bonitet"/>
-      <rule symbol="7" key="{d5da4c1e-5e95-416d-be6a-2f6f4058b34e}" filter="ARTYPE = 50 AND ARVEGET = 55" label="Snaumark, frisk vegetasjon"/>
-      <rule symbol="8" key="{b33f7b63-4d3b-48a3-b4f7-ed76e5e0345f}" filter="ARTYPE = 50 AND (ARVEGET = 54 OR ARVEGET = 99)" label="Snaumark, middels frisk vegetasjon"/>
-      <rule symbol="9" key="{32a3b9f8-4a30-4ce8-bb02-4d30e73a7be2}" filter="ARTYPE = 50 AND (ARVEGET = 52 OR ARVEGET = 53)" label="Snaumark, skrinn vegetasjon"/>
-      <rule symbol="10" key="{519d4ad1-91c0-4527-9cb3-1e94944ee00c}" filter="ARTYPE = 60 AND ARTRESLAG &lt;> 39" label="Myr med skog" description="ARTYPE = 60 AND ARTRESLAG != 39"/>
-      <rule symbol="11" key="{7c222321-e5ec-415a-aff8-fa5dfef0356c}" filter="ARTYPE = 60 AND ARTRESLAG = 39" label="Åpen myr"/>
-      <rule symbol="12" key="{1bcd106d-e4b6-4aa2-ba7f-15286c536154}" filter="ARTYPE = 50 AND ARVEGET = 51" label="Bart fjell og blokkmark"/>
-      <rule symbol="13" key="{57486540-104f-4c58-855b-b8ce6f8c57a4}" filter="ARTYPE = 10" label="Bebygd og samferdsel"/>
-      <rule symbol="14" key="{9f244eff-c4c9-4cff-a007-69bed5bdba48}" filter="ARTYPE = 70" label="Snøisbre"/>
-      <rule symbol="15" key="{826af86a-88bf-4c67-804e-0b3971924e3a}" filter="ARTYPE = 81" label="Ferskvann"/>
-      <rule symbol="16" key="{1e9c7f44-78e8-40dd-aafb-9d3ffeef8815}" filter="ARTYPE = 82" label="Hav"/>
-      <rule symbol="17" key="{2d6e640b-f6f6-442c-ab5c-485f0758c79c}" filter="ELSE" label="Annet"/>
+    <rules key="{ab48c31c-f1ec-4802-9d18-462efcf2ab13}">
+      <rule symbol="0" key="{a430ae0a-9638-43cd-b758-cad51eab7df0}" filter="ARTYPE = 20 AND ARJORDBR &lt;> 25" label="Fulldyrka- og overflatedyrka jord"/>
+      <rule symbol="1" key="{ca57ff99-e06e-4861-a600-719b47aee53b}" filter="ARTYPE = 20 AND ARJORDBR = 25" label="Innmarksbeite"/>
+      <rule symbol="2" key="{529d7d96-9445-4371-b6b4-33c8ca59b976}" filter="ARTYPE = 30 AND ARSKOGBON = 18" label="Skog, høg og særs høg bonitet"/>
+      <rule symbol="3" key="{5bb96926-01f8-4b96-8213-f6b5a2e93d5c}" filter="ARTYPE = 30 AND ARSKOGBON = 13" label="Skog, middels bonitet"/>
+      <rule symbol="4" key="{8adf3662-1eac-4ca6-947e-b9c5a7001db2}" filter="ARTYPE = 30 AND ARSKOGBON = 12" label="Skog, låg bonitet"/>
+      <rule symbol="5" key="{c93b182e-966c-42a3-894b-02c700636284}" filter="ARTYPE = 30 AND ARSKOGBON = 11" label="Skog, impediment"/>
+      <rule symbol="6" key="{db9984cd-eb96-44fe-aa87-7cedd7a55edc}" filter="ARTYPE = 30 AND ARSKOGBON = 99" label="Skog, ikke registrert bonitet"/>
+      <rule symbol="7" key="{c1eb768d-140d-4c22-9bd5-5eb0618fd0bb}" filter="ARTYPE = 50 AND ARVEGET = 55" label="Snaumark, frisk vegetasjon"/>
+      <rule symbol="8" key="{f05b6d23-fc82-4ac8-a5f1-d12bbda066a7}" filter="ARTYPE = 50 AND (ARVEGET = 54 OR ARVEGET = 99)" label="Snaumark, middels frisk vegetasjon"/>
+      <rule symbol="9" key="{8ed1b2a5-a239-49eb-bda5-ef1b537a786c}" filter="ARTYPE = 50 AND (ARVEGET = 52 OR ARVEGET = 53)" label="Snaumark, skrinn vegetasjon"/>
+      <rule symbol="10" key="{7ab8e0c5-2de5-4c28-a2dc-ecb9295243a1}" filter="ARTYPE = 60 AND ARTRESLAG &lt;> 39" label="Myr med skog" description="ARTYPE = 60 AND ARTRESLAG != 39"/>
+      <rule symbol="11" key="{84a3c892-2884-4df4-b857-07a0235cc830}" filter="ARTYPE = 60 AND ARTRESLAG = 39" label="Åpen myr"/>
+      <rule symbol="12" key="{cdf2e656-a01b-4c95-86a6-895da20c9ef1}" filter="ARTYPE = 50 AND ARVEGET = 51" label="Bart fjell og blokkmark"/>
+      <rule symbol="13" key="{4c604d57-a5a0-45c2-9798-1f9838d230aa}" filter="ARTYPE = 10" label="Bebygd og samferdsel"/>
+      <rule symbol="14" key="{6bdbe066-283f-40f1-a941-cd3f113eeb5f}" filter="ARTYPE = 70" label="Snøisbre"/>
+      <rule symbol="15" key="{3445f518-ca9a-407c-a54b-cc582169e462}" filter="ARTYPE = 81" label="Ferskvann"/>
+      <rule symbol="16" key="{5c208dc3-81b5-411c-942e-d3fca783fabb}" filter="ARTYPE = 82" label="Hav"/>
+      <rule symbol="17" key="{6c38733b-f992-4158-aae4-cb0eafca7a1b}" filter="ARTYPE = 'ELSE'" label="Annet"/>
     </rules>
     <symbols>
       <symbol alpha="1" force_rhr="0" clip_to_extent="1" type="fill" name="0">
@@ -232,11 +232,11 @@
           <prop v="bevel" k="joinstyle"/>
           <prop v="0,0" k="offset"/>
           <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
+          <prop v="Pixel" k="offset_unit"/>
           <prop v="35,35,35,255" k="outline_color"/>
           <prop v="solid" k="outline_style"/>
-          <prop v="0.26" k="outline_width"/>
-          <prop v="MM" k="outline_width_unit"/>
+          <prop v="1" k="outline_width"/>
+          <prop v="Pixel" k="outline_width_unit"/>
           <prop v="solid" k="style"/>
           <data_defined_properties>
             <Option type="Map">
