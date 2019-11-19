@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se">
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ogc="http://www.opengis.net/ogc" version="1.1.0">
   <NamedLayer>
-    <se:Name>AR50_03_63b4c</se:Name>
+    <se:Name>ar50gdb ArealressursFlate</se:Name>
     <UserStyle>
-      <se:Name>AR50_03_63b4c</se:Name>
+      <se:Name>ar50gdb ArealressursFlate</se:Name>
       <se:FeatureTypeStyle>
         <se:Rule>
           <se:Name>Fulldyrka- og overflatedyrka jord</se:Name>
@@ -479,50 +479,14 @@
 syntax error, unexpected ELSE - Expression was: ELSE-->
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:GraphicFill>
-                <se:Graphic>
-                  <se:Mark>
-                    <se:WellKnownName>horline</se:WellKnownName>
-                    <se:Stroke>
-                      <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-                      <se:SvgParameter name="stroke-width">1</se:SvgParameter>
-                    </se:Stroke>
-                  </se:Mark>
-                  <se:Size>7</se:Size>
-                  <se:Rotation>
-                    <ogc:Literal>45</ogc:Literal>
-                  </se:Rotation>
-                </se:Graphic>
-              </se:GraphicFill>
+              <se:SvgParameter name="fill">#ffffff</se:SvgParameter>
             </se:Fill>
-          </se:PolygonSymbolizer>
-          <se:PolygonSymbolizer>
-            <se:Fill>
-              <se:GraphicFill>
-                <se:Graphic>
-                  <se:Mark>
-                    <se:WellKnownName>horline</se:WellKnownName>
-                    <se:Stroke>
-                      <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-                      <se:SvgParameter name="stroke-width">1</se:SvgParameter>
-                    </se:Stroke>
-                  </se:Mark>
-                  <se:Size>7</se:Size>
-                  <se:Rotation>
-                    <ogc:Literal>135</ogc:Literal>
-                  </se:Rotation>
-                </se:Graphic>
-              </se:GraphicFill>
-            </se:Fill>
-          </se:PolygonSymbolizer>
-          <se:LineSymbolizer>
             <se:Stroke>
-              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-              <se:SvgParameter name="stroke-width">2</se:SvgParameter>
+              <se:SvgParameter name="stroke">#232323</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
-              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
             </se:Stroke>
-          </se:LineSymbolizer>
+          </se:PolygonSymbolizer>
         </se:Rule>
       </se:FeatureTypeStyle>
     </UserStyle>
