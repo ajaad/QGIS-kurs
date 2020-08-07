@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Georefering og digitalisering i QGIS</title>
+    <link rel="shortcut icon" href="img/konnestad.png" type="image/x-icon">
+<style>
+r1 {
+	color: #FF0000;
+}
+
+tt {
+	font-family: courier;
+	font-size:110%;
+}
+
+l {
+	color: #8959a8;
+}
+
+g {
+	color: #3e999f;
+}
+
+r {
+	color: #ff0000;
+}
+
+b {
+	color: #0000ff;
+}
+
+</style>
+
+<style type="text/css">
+<!--
+ .tab { margin-left: 60px; }
+-->
+</style>
+
+
+
+</head>
+
+<body>
+
+<h1>
+<img src="img/qgis/mGeorefRun200.png" width="80" />
+Georeferering og digitalisering i QGIS
+
+
+<br>
+<h4>
+Dette er en enkel ressursside for kurset "<i>Georeferering og digitalisering i QGIS</i>"
+
+<br>
+
+<hr>
+
+<br>
+
+
+<h3>
+
+<a href="https://ajaad.github.io/QGIS-kurs/georef/Oslo_71-1_Maridalen_20171208.PDF">
+<img src="img/qgis/mIconReport.png" width="30" />
+Den orginale hogstmeldingen (<i>.pdf</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Dette er det orginale dokumentet.</pre>
+
+
+<a href="https://ajaad.github.io/QGIS-kurs/georef/Maridalen_hogst_excel.xlsx">
+<img src="img/qgis/attributes.png" width="30" />
+Hogstmeldingen i tabellform (<i>.xlsl</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Informasjon fra hogstmeldingskjema skrevet inn i en tabell.</pre>
+
+<a href="https://ajaad.github.io/QGIS-kurs/poppler-0.68.0.zip">
+<img src="img/qgis/mActionTerminal.png" width="30" />
+Poppler for windows (<i>.exe</i>-program)</a>
+<pre style="white-space:normal;" class="tab">Kommandolinjeprogram for å konvertere <i>.pdf</i>-filer til bildefiler, eller ta ut bildefiler fra i>.pdf</i>-filer. Programmet krever ikke noen installasjon.</pre>
+
+
+<a href="https://ajaad.github.io/QGIS-kurs/georef/kart.zip">
+<img src="img/qgis/mActionAddImage.png" width="30" />
+Kartdokumenter konvertert til bildeformat (<i>.png</i>-format) </a>
+<pre style="white-space:normal;" class="tab">Dette er høyoppløslige bilder hentet ut av <i>.pdf</i>-filen. Bruk disse om du ikke får til Poppler.</pre>
+
+<a href="https://ajaad.github.io/QGIS-kurs/georef/kontrollpunkter.zip">
+<img src="img/qgis/mIconPointLayer.png" width="30" />
+Punkter i terrenget (<i>.shp</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Punkter i terrenget som er lett gjennkjennelig kan markeres.</pre>
+
+
+<a href="https://ajaad.github.io/QGIS-kurs/georef/gcp_maridalen.zip">
+<img src="img/qgis/mCapturePoint.png" width="30" />
+Kontrollpunkter (<i>.points</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Disse punktene markerer samme området med ett koordinat i terrenget og et tilsvarende koordinat i kartbildet.</pre>
+
+
+<a href="filer/georefererte_kartdokument2020.zip">
+<img src="img/qgis/mGeorefRun200.png" width="30" />
+Georefererte kartdokument (<i>.png</i>-format, med <i>.wld</i>-sidefiler)</a>
+<pre style="white-space:normal;" class="tab">Kartdokumetnene ferdig georeferert. Kan lastes direkte inn i QGIS.</pre>
+
+<a href="https://ajaad.github.io/QGIS-kurs/georef/rapport_for_georeferering.pdf">
+<img src="img/qgis/mIconReport.png" width="30" />
+Rapport for georeferering (<i>.pdf</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Rapporten viser nøyaktigheten til georefereringsprosessen.</pre>
+
+
+<a href="https://ajaad.github.io/QGIS-kurs/georef/hogstmelding_uten_egenskaper.zip">
+<img src="img/qgis/mIconPolygonLayer.png" width="30" />
+Skjemdigitaliserte hogstmeldinger uten egenskapstabell (<i>.shp</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Her er flatene tegnet av og lagret som et vektorformat.</pre>
+
+<a href="https://ajaad.github.io/QGIS-kurs/georef/hogstmelding_polygon.zip">
+<img src="img/qgis/mIconPolygonLayer.png" width="30" />
+Skjemdigitaliserte hogstmeldinger i forskjellige formater</a>
+<pre style="white-space:normal;" class="tab">Her er tabellinformasjonen lagt til flatene. Vektorene er også konvertert til å kunne brukes i Google Earth (<i>.kml</i>), OryxMaps (<i>.kml</i>) og OsmAnd (<i>.gpx</i>). Shapefilen er også farglagt med hjelp av en <i>.sld</i>-fil.</pre>
+
+<a href="https://ajaad.github.io/QGIS-kurs/georef/Sandermosen.pdf">
+<img src="img/qgis/mActionSaveAsPDF.png" width="30" />
+Kartdokument  (Georeferert <i>.pdf</i>-fil)</a>
+<pre style="white-space:normal;" class="tab">Ferdig kartdokument. Dette er en georeferert <i>.pdf</i>-fil og Kan åpnes i QGIS og Avenza Maps</pre>
+
+
+
+<!--- Ny liste 
+I dette kurset vil vi bruke data som er tilgjengelig fra <a href="http://www.geonorge.no/"><tt>geonorge.no</tt></a></li>.
+--->
+
+
+
+<!--- Kontaktinformasjon, evalueringskjema, flyer, tid og sted link  --->
+
+
+
+<br>
+<hr>
+<br>
+
+
+<h3>
+<img src="img/qgis/mIconFieldDateTime.png" width="30" />
+<a href="https://ajaad.github.io/QGIS-kurs/kurs2020"><tt>Tid og sted</tt></a>
+<h4>
+
+
+
+
+
+<h3>
+<img src="img/qgis/mIconSuccess.png" width="30" />
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSd79h5tv09heVXSxgKR3ewuSg3DBIjPEk_3Vflj2_PR9D2nMA/viewform"><tt>Trykk her for å gå til evalueringsskjema.</tt></a>
+<h4>
+
+
+
+
+
+<h3>
+<img src="img/qgis/mActionSaveAsPDF.png" width="30" />
+<a href="pdf/georef2020.pdf"><tt>Flyer for Georeferering og digitalisering i QGIS (.pdf)</tt></a>
+<h4>
+
+<br>
+
+
+
+<!--- Konnestad consulting logo --->
+
+
+<h3>
+<img src="img/qgis/user.png" width="30" />
+Anders Johan Konnestad
+<br><br>
+<h4>
+
+<table class="tab">
+<tr>
+ <td>Tlf.:</td>
+ <td>+47 977 22 320</td>
+</tr>
+
+
+<tr>
+ <td>E-post:</td>
+ <td>anders.konnestad@nmbu.no</td>
+</tr>
+
+
+<tr>
+ <td>Org.nr.:</td>
+ <td>922 612 072</td>
+</tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<br>
+<img src="img/logo/konnestad_logo2.svg" width="300" />
+
+<h3>
+Denne siden er driftet av Konnestad Consulting <br>
+
+&copy; Anders Johan Konnestad
+
+<br>
+<br>
+<hr>
+
+
+</body>
+
+
+
+         
