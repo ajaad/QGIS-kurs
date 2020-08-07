@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Praktisk startkurs i QGIS</title>
+    <link rel="shortcut icon" href="img/konnestad.png" type="image/x-icon">
+<style>
+r1 {
+	color: #FF0000;
+}
+
+tt {
+	font-family: courier;
+	font-size:110%;
+}
+
+l {
+	color: #8959a8;
+}
+
+g {
+	color: #3e999f;
+}
+
+r {
+	color: #ff0000;
+}
+
+b {
+	color: #0000ff;
+}
+
+</style>
+
+<style type="text/css">
+<!--
+ .tab { margin-left: 60px; }
+-->
+</style>
+
+</head>
+
+<body>
+
+<h1>
+<img src="img/qgis/providerQgis.png" width="80" />
+Praktisk startkurs i QGIS
+
+
+<br>
+<h4>
+Dette er en enkel ressursside for Praktisk startkurs i QGIS.
+
+<br>
+<hr>
+<br>
+
+<!--- Last ned QGIS --->
+
+QGIS er et vederlagsfritt program for behandlig av geografisk informasjon.
+Programmet kan enkelt installers på egen laptop og brukest til ethvert formål etter <a href="https://github.com/qgis/QGIS/blob/master/COPYING">GPLv2-lisensen</a>.
+Det forutsettes at deltakerne har egen laptop med programmet installert, for å bruke minst mulig tid på installasjon i løpet av kurset.
+Det er også anbefalt å ha med egen datamus.
+
+
+<h3>
+<img src="img/qgis/windows.png" width="30" />
+Installasjon for for Windows 10:
+
+<h4>
+ <ul>
+  <li><a href="http://www.qgis.com/">Gå til www.qgis.com</a>.</li>
+  <li>Trykk "<i>Download Now</i></a>.</li>
+  <li><a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.14.1-1-Setup-x86_64.exe">Windows brukere: Velg "<i>QGIS Standalone Installer Version 3.14 (64 bit)</i></a>.</li>
+  <li>Bruker du en eldre datamaskin med 32-bit prosessor, må du laste ned 32-bit versjonen.</li>
+  <li>Om du har installert Windows kopilert for 32-bit en prosessorer, må du også bruke 32-bit versjonen, selv om datamaskinen har en 64-bit prosessor. (Gjelder dem som har en ny pc, men som også må kunne kjøre eldre 16-bit programmer.)</li>
+  <li>For å sjekke systemtypen: Gå til "<i>Kontrollpanel</i>" og velg "<i>System</i>".</li>
+  <li>Kjør <i>.exe</i>-filen og installer programmet.</li>
+  <li>For å åpne QGIS, trykk "<i>QGIS Desktop</i>" eller "<i>QGIS skrivebordprogrammet</i>" på norsk.</li>
+</ul> 
+<br>
+
+<h3>
+<img src="img/qgis/debian200.png" width="30" />
+Installasjon for Debian 10 Buster (GNU/Linux):
+<h4>
+ <ul>
+  <li><r1>OBS: </r1>Den nyeste versjonen er oftest ikke tilgjengelige i de offesielle tilbyderene fra opertivsystemene.</li>
+  <li> <a href="https://www.qgis.org/en/site/forusers/alldownloads.html#debian-ubuntu"> Følg veilederen</a> og bruk tilbyderen <tt>"https://qgis.org/debian buster main"</tt>.</li>
+  <li>Det er også mulig å kompilere en egen versjon av <a href="https://github.com/qgis/QGIS">QGIS fra kildekoden på github</a>. <r1>OBS: </r1>Dette gir den aller nyeste versjonen, men dette fører erfaringsmessig til en ustabil opplevelse av QGIS.</li>
+</ul> 
+<br>
+
+<h3>
+<img src="img/qgis/Finder200.png" width="30" />
+Installasjon for MacOS:
+<h4>
+ <ul>
+  <li><r1>OBS: </r1>Kursleder har ingen erfaring med MacOS eller andre Appleprodukter.</li>
+  <li><a href="https://qgis.org/downloads/macos/qgis-macos-pr.dmg">Offesiell versjon av QGIS 3.14 til MacOS</a></li>
+  <li><a href="https://www.kyngchaos.com/software/qgis/">Det finnes ogås en uoffseiell versjon som kan prøves ut.</a></li>
+</ul> 
+<br>
+
+<h3>
+<img src="img/qgis/freebsd200.png" width="30" />
+Installasjon for FreeBSD (Unix):
+<h4>
+ <ul>
+  <li><a href="https://www.qgis.org/en/site/forusers/alldownloads.html#freebsd"> I tilfelle noen bruker FreeBSD</a></li>
+  <li><r1>OBS: </r1>Kursleder har noe erfaring med FreeBSD, men har aldri møtt noen andre som har prøvd det.</li>
+</ul> 
+<br>
+
+
+
+<br>
+<hr>
+<br>
+
+<!--- Last ned datasett --->
+<h3>
+<img src="img/qgis/qgis_gml_icon.png" width="30" />
+Datasett:
+
+<!--- Ny liste 
+I dette kurset vil vi bruke data som er tilgjengelig fra <a href="http://www.geonorge.no/"><tt>geonorge.no</tt></a></li>.
+--->
+
+<h4>
+ <ol>
+  <li><a href="https://kartkatalog.geonorge.no/metadata/arealressurskart-ar50-serie/4bc2d1e0-f693-4bf2-820d-c11830d849a3">Last ned datasett AR50-datasettet over Oslo</a>.</li>
+  <li>Velg <i>.gml</i>-format og sett projeksjonen til <tt>EUREF89 UTM sone 32</tt>.</li>
+  <li>Last ned</li>
+  <li>Pakk ut <i>.zip</i>-fila</li>
+  <li>Dra <i>.gml</i>-filen inn i QGIS</li>
+  <li>Velg "<i>ArealressursFlate</i>" og trykk "<i>OK</i>"</li>
+  <li><a href="https://www.nibio.no/tjenester/nedlasting-av-kartdata/dokumentasjon/ar50">Dokumentasjon og er tilgjengelig på NIBIO sine hjemmesider</a></li>
+  <li><a href="https://register.geonorge.no/data/documents/Tegneregler_AR50_v3_presentasjonsregler-nibio-ar50-20170315_.pdf">Tegneregler er tilgjengelige på geonorge.no</a></li>
+</ol> 
+<br>
+
+
+
+<h3>
+<img src="img/qgis/symbology.png" width="30" />
+Stiler:
+
+<h4>
+ <ol>
+  <li><a href="stiler/ar50_bonitet_2020.zip">Trykk her for å laste ned bonitetstilen</a></li>
+  <li>Pakk ut <i>.zip</i>-fila, filen skal være i <i>.sld</i>-format.</li>
+  <li>Gå til Symbologi-menyen (<img src="img/qgis/symbology.png" width="20" />) i Lagegenskapene.</li>
+  <li>Trykk "<i>Stil</i>" og velg "<i>Last stil...</i>".</li>
+  <li>Last inn <i>.sld</i>-filen og trykk "<i>OK</i>"</li>
+  <li>Kartet vil nå være regelstyrt farglagt (<img src="img/qgis/rendererRuleBasedSymbol.png" width="20" />). </li>
+</ol> 
+<br>
+
+<!--- Ny liste --->
+
+<h3>
+<img src="img/qgis/mIconWms.png" width="30" />
+WMS-tjeneste:
+
+<h4>
+<ol>
+  <li>Høyreklikk på jordkloden i Browseren til venstre i QGIS og velg "<tt>Ny forbindelse</tt>".</li>
+  <li>Navn: "<a href="https://kartkatalog.geonorge.no/metadata/toporaster-4-wms/430b65ec-8543-4387-bf45-dbb5ce4bf4c8"><tt>Toporaster 4</tt></a>". (valgfritt navn, men navn er obligatorisk)</li>
+  <li>URL: <a href="https://kartkatalog.geonorge.no/metadata/13e15833-8d94-4b89-a53d-eb8da289677b"><tt>http://openwms.statkart.no/skwms1/wms.toporaster4?version=1.3.0&service=wms&request=getcapabilities</tt></a> </li>
+  <li>Trykk "<i>OK</i>"</li>
+ <li>Det er nå en liste under jordklodesymbolet: Ekspander listen ved å trykke på den svarte pilen (<img src="img/qgis/mIconExpand.png" width="20" />)  til venstre for kloden (<img src="img/qgis/mIconWms.png" width="20" />).</li>
+  <li>Dobbeltklikk på objektene som dukker opp under helt til WMS-tjenesten blir lagt til som et lag i lagvinduet.</li>
+  <li><r1>OBS: </r1>Linken som står i klartekst over er ikke en tradisjonell nettadresse. I nettleseren vil kun vise den som en XML-tabell.</li>  
+</ol> 
+<br>
+
+<br>
+<hr>
+<br>
+
+
+<h3>
+<img src="img/qgis/mIconFieldDateTime.png" width="30" />
+<a href="https://ajaad.github.io/QGIS-kurs/kurs2020"><tt>Tid og sted</tt></a>
+<h4>
+
+
+
+
+
+<h3>
+<img src="img/qgis/mIconSuccess.png" width="30" />
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSendOvn46oN2tleivJf3UB3ioV6TuiCfOPjwFssDUZYE_htUA/viewform?vc=0&c=0&w=1"><tt>Trykk her for å gå til evalueringsskjema.</tt></a>
+<h4>
+
+
+
+
+
+<h3>
+<img src="img/qgis/mActionSaveAsPDF.png" width="30" />
+<a href="pdf/startkurs2020.pdf"><tt>Flyer for Praktisk startkurs i QGIS (.pdf)</tt></a>
+<h4>
+
+<br>
+
+
+
+<!--- Konnestad consulting logo --->
+
+
+<h3>
+<img src="img/qgis/user.png" width="30" />
+Anders Johan Konnestad
+<br><br>
+<h4>
+
+<table class="tab">
+<tr>
+ <td>Tlf.:</td>
+ <td>+47 977 22 320</td>
+</tr>
+
+
+<tr>
+ <td>E-post:</td>
+ <td>anders.konnestad@nmbu.no</td>
+</tr>
+
+
+<tr>
+ <td>Org.nr.:</td>
+ <td>922 612 072</td>
+</tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<br>
+<img src="img/logo/konnestad_logo2.svg" width="300" />
+
+<h3>
+Denne siden er driftet av Konnestad Consulting <br>
+
+&copy; Anders Johan Konnestad
+
+<br>
+<br>
+<hr>
+
+
+</body>
+
+
+
+         
