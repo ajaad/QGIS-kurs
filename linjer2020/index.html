@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>GPS-sporing - punkter og linjer i QGIS</title>
+    <link rel="shortcut icon" href="img/konnestad.png" type="image/x-icon">
+<style>
+r1 {
+	color: #FF0000;
+}
+
+tt {
+	font-family: courier;
+	font-size:110%;
+}
+
+l {
+	color: #8959a8;
+}
+
+g {
+	color: #3e999f;
+}
+
+r {
+	color: #ff0000;
+}
+
+b {
+	color: #0000ff;
+}
+
+</style>
+
+<style type="text/css">
+<!--
+ .tab { margin-left: 60px; }
+-->
+</style>
+
+
+
+</head>
+
+<body>
+
+<h1>
+<img src="img/qgis/qgis_qpx_icon.png" width="80" />
+GPS-sporing - punkter og linjer i QGIS.
+
+
+
+
+
+
+<br>
+<h4>
+Dette er en enkel ressursside for "<i>GPS-sporing - punkter og linjer i QGIS</i>".
+
+
+
+
+
+<br>
+<hr>
+<br>
+
+<!--- Apper  --->
+
+GPX-formatet er åpent og gratis å bruke, og mange applikasjoner bruker dette formatet.
+Om man ikke eier en garmin-enhet, kan man enkelt laste ned en applikasjon til smarttelefonen.
+For ekempel disse:
+
+<h3>
+<a href="fhttps://play.google.com/store/apps/details?id=com.mendhak.gpslogger&hl=en_US">
+<img src="img/qgis/gpslogger200.png" width="30" />
+GPS Logger for Android</a>
+<pre style="white-space:normal;" class="tab">Dette er en åpen applikasjon som fungerer på Android-enheter.
+Kildekoden er tilgjengelig på <a href="https://github.com/mendhak/gpslogger">github</a>,
+og hvor man selv kan gjøre endringer.
+Utvikleren erklærer også at  <a href="https://github.com/mendhak/gpslogger/blob/master/assets/text/privacypolicy.md">applikasjonen ikke samler data fra brukeren</a>.</pre>
+
+<h3>
+<a href="https://apps.apple.com/us/app/mytracks-the-gps-logger/id358697908">
+<img src="img/qgis/mytracks200.png" width="30" />
+myTracks - The GPS-Logger (iPhone)</a>
+<pre style="white-space:normal;" class="tab">Dette er et alternativ for dem som bruker iPhone.</pre>
+
+<h4>
+Det kreves ikke at deltakerne prøver disse applikasjonene eller bruker dem til å samle inn data.
+Det er imidlertid anbefalt fordi jeg da har mulighet til å hjelpe med tekniske problemer.
+
+
+<!--- Last ned datasett --->
+
+<br>
+<hr>
+<br>
+
+<h4>
+Kurset vil derimot fokusere på hvordan man kan behandle slike datasett i QGIS.
+Datasettet som vil bli brukt dekker ett mindre turområde i Ås, nærmere bestemt Åsmåsan.
+Dette datasettet er samlet inn med en Garmin-enhet, men i tilsvarene format som man vil kunne eksportere fra en smarttelefonapp.
+
+
+<!--- Kursoversikt --->
+<h3>Orginaldata: <br>
+<h3>
+<a href="filer/aasmaasan_gpslogger.zip">
+<img src="img/qgis/qgis_qpx_icon.png" width="30" />
+Sporlogger fra Åsmåsan (<i>.gpx</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Dette er orginale sporlogger. Innsamlet med en Garmin eTrex HCx Legend.</pre>
+
+<br>
+<hr>
+<br>
+<!--- Underveisresultater --->
+<h3>Underveisresultater: <br>
+
+<h3>
+<a href="filer/sporlogger.zip">
+<img src="img/qgis/qgis_shp_icon.png" width="30" />
+Sporlogger (<i>.shp</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Sporloggene slått sammen til én <i>.shp</i>-fil, som også er konvertert til UTM sone 32 koordinater (EPSG:25832)</pre>
+
+<h3>
+<a href="filer/forenklet_spor.zip">
+<img src="img/qgis/mAlgorithmSimplify.png" width="30" />
+Sporlogger (<i>.shp</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Sporloggene forenklet, for å gjøre seneree prosesser mindre prosessorkrevende.</pre>
+
+
+<h3>
+<a href="filer/klipplag.zip">
+<img src="img/qgis/mActionCapturePolygon.png" width="30" />
+Avgrensing av interesseområde (<i>.shp</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Dette er et flatelag som kan brukest til å klippe sporene.</pre>
+
+<h3>
+<a href="filer/spor_klippet.zip">
+<img src="img/qgis/mAlgorithmClip.png" width="30" />
+Spor klippet (<i>.shp</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Sporene klippet etter loggen</pre>
+
+
+<!--- raster --->
+<h3>
+<a href="filer/linjetetthet.zip">
+<img src="img/qgis/LineDensity.png" width="30" />
+Linjetetthet (<i>.tif</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Rasternett som viser linjetettheten i m/m²</pre>
+
+<h3>
+<a href="filer/stier_terskel_0-10.tif.zip">
+<img src="img/qgis/rasterkalkulator2.png" width="30" />
+Stier etter terskelverdi (<i>.tif</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Terskelverdi satt for å skape skarpe grenser.</pre>
+
+
+<!--- løypenett --->
+<h3>
+<a href="filer/stinett.zip">
+<img src="img/qgis/providerSaga.png" width="30" />
+Stinett (<i>.shp</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Dette er stinettet (med noen manuelle justeringer)</pre>
+
+<!--- veipunkter --->
+<h3>
+<a href="filer/veipunkter.zip">
+<img src="img/qgis/mActionCapturePoint.png" width="30" />
+Veipunkter (<i>.shp</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Dette er veipunktene.</pre>
+
+<br>
+<hr>
+<br>
+<!--- Sluttresultat --->
+<h3>Sluttresultat: <br>
+
+<h3>
+<a href="filer/korteste_vei.zip">
+<img src="img/qgis/networkanalysis.png" width="30" />
+Korteste vei (<i>.shp</i>-format)</a>
+<pre style="white-space:normal;" class="tab">Den korteste veien fra et valgt punkt til alle de andre punktene i <i>veipunkter.shp</i></pre>
+
+
+<br>
+<hr>
+<br>
+<!--- Kursoversikt --->
+
+<h3>
+<img src="img/qgis/mIconFieldDateTime.png" width="30" />
+<a href="https://ajaad.github.io/QGIS-kurs/kurs2020"><tt>Tid og sted</tt></a>
+<h4>
+
+<!--- Evalueringsskjema --->
+<h3>
+<img src="img/qgis/mIconSuccess.png" width="30" />
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfAU3El1Ba4D8nHBEg0g7oDO7DeJ2gX8-xxrPC4atN9hngDnA/viewform"><tt>Trykk her for å gå til evalueringsskjema.</tt></a>
+<h4>
+
+<!--- Flyer --->
+<h3>
+<img src="img/qgis/mActionSaveAsPDF.png" width="30" />
+<a href="pdf/linjer2020.pdf"><tt>Flyer for GPS-sporing - punkter og linjer i QGIS (.pdf)</tt></a>
+<h4>
+
+<br>
+
+
+
+<!--- Kontaktinformasjon --->
+
+
+<h3>
+<img src="img/qgis/user.png" width="30" />
+Anders Johan Konnestad
+<br><br>
+<h4>
+
+<table class="tab">
+<tr>
+ <td>Tlf.:</td>
+ <td>+47 977 22 320</td>
+</tr>
+
+
+<tr>
+ <td>E-post:</td>
+ <td>anders.konnestad@nmbu.no</td>
+</tr>
+
+
+<tr>
+ <td>Org.nr.:</td>
+ <td>922 612 072</td>
+</tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<!--- Konnestad consulting logo --->
+<br>
+<img src="img/logo/konnestad_logo2.svg" width="300" />
+
+<h3>
+Denne siden er driftet av Konnestad Consulting <br>
+
+&copy; Anders Johan Konnestad
+
+<br>
+<br>
+<hr>
+
+
+</body>
+
+
+
+         
