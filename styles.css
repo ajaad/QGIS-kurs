@@ -1,0 +1,191 @@
+
+/* Header linje */
+/* Inspirasjon: https://www.youtube.com/watch?v=5bMdjkfvONE */
+
+.linje {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.kapsel {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+    overflow: auto;
+    align-items: center;
+}
+
+.kapsel2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.venstre {
+    display: flex;
+}
+
+.hoyre {
+    display: flex;
+}
+
+.titel{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+
+/* Kursportefolje */
+
+/* Inspirasjon: https://www.quackit.com/css/grid/tutorial/create_a_nested_grid.cfm */
+
+.outer-grid {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 200px;
+
+}
+
+.objekt {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+    z-index: 1;
+}
+
+.objekt:hover {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+    background-image: url(bilder/white1.png) !important;
+    z-index: 2;
+}
+
+.inner-grid {
+    opacity: 0;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    transition: 1s;
+    padding-inline-end: 10px;
+}
+
+.objekt:hover .inner-grid {
+    opacity: 1;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.objekt:hover .inner-grid .div {
+    align-items: center;
+    color: black;
+}
+
+.objekt .logo img {
+    width: 20%;
+    transition: 1s;
+}
+
+.objekt:hover .logo img {
+    width: 40%;
+    opacity: 1;
+    transition: 1s;
+}
+
+.objekt .bilde img {
+    height: 0px;
+    opacity: 0;
+    transition: 1s;
+    width: 25%;
+    height: auto;
+}
+
+.objekt:hover .bilde img {
+    transition: 1s;
+    opacity: 1;
+    /* height: 320px;
+    width: auto; */
+    width: 80%;
+    height: auto;
+}
+
+.objekt .logo {
+    opacity: 0;
+    transition: 1s;
+    float: center;
+    align-items: center;
+    color: transparent;
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.objekt:hover .logo {
+    opacity: 1;
+    transition: 1s;
+    left:right;
+    color: black;
+    align-items: center;
+    padding: 20px;
+}
+
+.beskrevelse {
+    font-size: 15px;
+    text-align: left;
+}
+
+.objekt:hover .beskrevelse img {
+    width: 30px;
+    height: 30px
+}
+
+/* Egen centerklasse for Konnestaddelen */
+.center {
+    display: block;
+    margin: auto 0px ;
+    text-align:center;
+}
+
+.beskrevelse img {
+    vertical-align:middle;
+    margin:0px 20px;
+}
+
+
+
+/* Kursplan */
+
+.kurslinje {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 30px;
+    overflow: auto;
+    align-items: center;
+}
+
+.kurslinje2 {
+    display: flex;
+    padding-right: 20px;
+    align-items: center;
+}
+
+/*
+.kurslinje img {
+    padding: 1cm;
+} */

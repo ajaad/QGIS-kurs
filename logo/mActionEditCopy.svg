@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg36"
+   version="1.1"
+   width="24"
+   viewBox="0 0 24 24"
+   height="24">
+  <metadata
+     id="metadata42">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs40" />
+  <g
+     id="g34"
+     transform="translate(0 -8)">
+    <g
+       id="g16"
+       transform="translate(2 -2)"
+       opacity=".5">
+      <path
+         id="path2"
+         stroke-linejoin="round"
+         stroke="#5b5b5c"
+         fill-rule="evenodd"
+         fill="#fff"
+         d="m6.5 27.5v-15h7l4 4v11z" />
+      <path
+         id="path4"
+         stroke-linejoin="round"
+         stroke="#5b5b5c"
+         fill-rule="evenodd"
+         fill="#f0f0f0"
+         d="m13.5 12.5v4h4z" />
+      <path
+         id="path6"
+         stroke="#969696"
+         fill="none"
+         d="m8 17.5h6.5" />
+      <path
+         id="path8"
+         stroke="#969696"
+         fill="none"
+         d="m8 19.5h7.5" />
+      <path
+         id="path10"
+         stroke="#6a6a6a"
+         fill="none"
+         d="m8 21.5h5" />
+      <path
+         id="path12"
+         stroke="#969696"
+         fill="none"
+         d="m8 23.5h7" />
+      <path
+         id="path14"
+         stroke="#969696"
+         fill="none"
+         d="m8 25.5h7" />
+    </g>
+    <g
+       id="g32"
+       transform="translate(-2 2)">
+      <path
+         id="path18"
+         stroke-linejoin="round"
+         stroke="#5b5b5c"
+         fill-rule="evenodd"
+         fill="#fff"
+         d="m6.5 27.5v-15h7l4 4v11z" />
+      <path
+         id="path20"
+         stroke-linejoin="round"
+         stroke="#5b5b5c"
+         fill-rule="evenodd"
+         fill="#f0f0f0"
+         d="m13.5 12.5v4h4z" />
+      <path
+         id="path22"
+         stroke="#969696"
+         fill="none"
+         d="m8 17.5h6.5" />
+      <path
+         id="path24"
+         stroke="#969696"
+         fill="none"
+         d="m8 19.5h7.5" />
+      <path
+         id="path26"
+         stroke="#969696"
+         fill="none"
+         d="m8 21.5h5" />
+      <path
+         id="path28"
+         stroke="#969696"
+         fill="none"
+         d="m8 23.5h7" />
+      <path
+         id="path30"
+         stroke="#969696"
+         fill="none"
+         d="m8 25.5h7" />
+    </g>
+  </g>
+</svg>
