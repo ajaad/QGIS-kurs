@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Vann og vassdrag i QGIS</title>
+    <link rel="shortcut icon" href="img/konnestad.png" type="image/x-icon">
+<style>
+r1 {
+	color: #FF0000;
+}
+
+tt {
+	font-family: courier;
+	font-size:110%;
+}
+
+l {
+	color: #8959a8;
+}
+
+g {
+	color: #3e999f;
+}
+
+r {
+	color: #ff0000;
+}
+
+b {
+	color: #0000ff;
+}
+
+</style>
+
+<style type="text/css">
+<!--
+ .tab { margin-left: 60px; }
+-->
+</style>
+
+
+
+</head>
+
+<body>
+
+<h1>
+<img src="img/qgis/providerSaga.png" width="80" />
+Vann og vassdrag i QGIS
+
+
+
+
+
+
+<br>
+<h4>
+Dette er en enkel ressursside for "<i>Vann og vassdrag i QGIS</i>".
+
+
+
+<!--- Last ned datasett --->
+
+<br>
+<hr>
+<br>
+
+<h4>
+
+
+
+
+<!--- Kursoversikt --->
+<h3>Kursdata: <br>
+<h3>
+<a href="filer/hoydemodell_1m_int16.tiff.zip">
+<img src="img/qgis/qgis_dem_icon.png" width="30" />
+Høydedata </a>
+<pre style="white-space:normal;" class="tab">Dette datasettet er satt sammen av de opprinnelige UTM sone 32 høydemodellene fra <a href="https://hoydedata.no">hoydedata.no</a> og klippet til.
+	Oppløsningen er 1 meter og høydeverdiene er samplet ned til én meter.
+	Nedsamplingen er blitt gjort for å komprimere datasettet og gjøre det enklere å prosessere.
+	For mange andre formål vil bruk av nedsamplet data gi dårlige resultater.
+</pre>
+
+<h3>
+<a href="filer/stinett_Kartverket_N50.zip">
+<img src="img/qgis/mIconLineLayer.png" width="30" />
+Stinett </a>
+<pre style="white-space:normal;" class="tab">
+	Dette datasettet viser traktorveier og stier innenfor arbeidsområdet.
+	Datasettet er hentet fra <a href="https://kartkatalog.geonorge.no/metadata/n50-kartdata/ea192681-d039-42ec-b1bc-f3ce04c189ac">geonorge.no</a>.
+	Filformat er ESRI-Shapefile.
+</pre>
+
+<h3>
+<a href="filer/arealdekke_Kartverket_N50.zip">
+<img src="img/qgis/mIconPolygonLayer.png" width="30" />
+Arealdekke </a>
+<pre style="white-space:normal;" class="tab">
+	Dette er kartverkets arealdekke hentet fra <a href="https://kartkatalog.geonorge.no/metadata/n50-kartdata/ea192681-d039-42ec-b1bc-f3ce04c189ac">geonorge.no</a>. 
+	Filformat er ESRI-Shapefile.
+</pre>
+
+<h3>
+<a href="filer/hoydemodell_1m_float32.tiff.zip">
+<img src="img/qgis/qgis_dem_icon.png" width="30" />
+Høydedata float32 </a>
+<pre style="white-space:normal;" class="tab">
+	Høydemodellen for et mindre område: <i>POLYGON((461500 6629500, 464000 6629500, 464000 6627000, 461500 6627000, 461500 6629500))</i>
+
+</pre>
+
+
+
+<br>
+<hr>
+<br>
+<!--- Underveisresultater --->
+<h3>Underveisresultater: <br>
+
+<h3>
+<a href="filer/sandvatn_omriss_geomfix.zip">
+<img src="img/qgis/polygonize200.png" width="30" />
+Omriss av Sandvatn </a>
+<pre style="white-space:normal;" class="tab">
+	Omrisset av Sandvatn. Vannet ligger 1069 meter over havet. Laget er polygonisert og kjørt gjennom "Fiks geometrier"-algoritmen.
+</pre>
+
+<h3>
+<a href="filer/hoydekurver_5m.zip">
+<img src="img/qgis/contour200.png" width="30" />
+Høydekoter </a>
+<pre style="white-space:normal;" class="tab">
+	Høydekoter generert ved bruk av høydemodell. En .qml-stil er vedlagt.
+</pre>
+
+<h3>
+<a href="filer/nedborfelt_manuell.zip">
+<img src="img/qgis/mActionCapturePolygon.png" width="30" />
+Nedbørsfelt manuelt tegnet </a>
+<pre style="white-space:normal;" class="tab">
+	Nedbørsfelt manuelt tegnet etter høydekoter. En .qml-stil er vedlagt.
+</pre>
+
+<h3>
+<a href="filer/fill_sinks.zip">
+<img src="img/qgis/providerSaga.png" width="30" />
+Høydemodell med fylte hull </a>
+<pre style="white-space:normal;" class="tab">
+	Høydemodell genrerert med "fill sinks"-algoritmen.
+</pre>
+
+<h3>
+<a href="filer/channel_network_and_drainage_basins.zip">
+<img src="img/qgis/providerSaga.png" width="30" />
+Nedbørsfelt, kanaler og knutepunkter.</a>
+<pre style="white-space:normal;" class="tab">
+	Nedbørsfelt, kanaler og knutepunkter med fargelegging.
+</pre>
+
+
+<h3>
+<a href="filer/upslope_area.zip">
+<img src="img/qgis/providerSaga.png" width="30" />
+Upslope area </a>
+<pre style="white-space:normal;" class="tab">
+	Nedbørsfelt utregnet ved hjelp av <a href="http://www.saga-gis.org/saga_tool_doc/2.3.0/ta_hydrology_4.html">Upslope area</a>"-algoritmen. Koordinatet er: <i>POINT(462562.5 6628015.5)</i>
+</pre>
+
+<h3>
+<a href="filer/upslope_area.zip">
+<img src="img/qgis/polygonize200.png" width="30" />
+Upslope area - vektorisert </a>
+<pre style="white-space:normal;" class="tab">
+	Polygonisert versjon av upslope area. Kartesisk areal: 672365.000 m<sup>2</sup>.
+</pre>
+
+<!---
+<h3>
+<a href="filer/flow_accumulation_rho.tif.zip">
+<img src="img/qgis/providerSaga.png" width="30" />
+Flow accumulation - Rho 8 </a>
+<pre style="white-space:normal;" class="tab">
+	Flow accumulation "<i>Rho 8</i>"-metoden generert med <a href="http://www.saga-gis.org/saga_tool_doc/2.1.3/ta_hydrology_2.html">Catchment Area (Flow Tracing)</a>.
+	Rask algoritme. Bommet med 9818 m<sup>2</sup> realtivt til tidligere utregning.
+</pre>
+
+
+<h3>
+<a href="filer/flow_accumulation_kinematicRouting.tif.zip">
+<img src="img/qgis/providerSaga.png" width="30" />
+Flow accumulation - Kinematic Routing Algorithm </a>
+<pre style="white-space:normal;" class="tab">
+	Flow accumulation med "<i>Kinematic Routing Algorithm</i>"-metoden
+	generert med <a href="http://www.saga-gis.org/saga_tool_doc/2.1.3/ta_hydrology_2.html">Catchment Area (Flow Tracing)</a>.
+	Algoritmen tar lang tid. Bommet med 442 m<sup>2</sup> realtivt til tidligere utregning.
+</pre>
+--->
+
+<h3>
+<a href="filer/catchment_area.tif.zip">
+<img src="img/qgis/providerSaga.png" width="30" />
+Catchment area - Deterministic 8 </a>
+<pre style="white-space:normal;" class="tab">
+	<a href="http://www.saga-gis.org/saga_tool_doc/2.1.3/ta_hydrology_1.html">Catchment area</a> med "<i>Deterministic 8</i>"-metoden.
+</pre>
+
+
+<h3>
+<a href="filer/nedbor_2mm_vann_meter_per_sekund.tif.zip">
+<img src="img/qgis/rasterkalkulator2.png" width="30" />
+Strøm ved 2mm nedbør - meter per sekund </a>
+<pre style="white-space:normal;" class="tab">
+	Utregning av strøm i alle elvene i meter per sekund ved 2mm nedbør.
+</pre>
+
+
+<h3>
+<a href="filer/arealberegning.zip">
+<img src="img/qgis/mAlgorithmClip.png" width="30" />
+Forenkla versjoner av vektorfilene </a>
+<pre style="white-space:normal;" class="tab">
+	Tilklippet arealdekkelag for å fokusere på områder innenfor nedbørfeltet.
+	Størrelsen på flatene er regnet ut på nytt og statistikkoppsummering ligger vedlagt i en <i>.csv</i>-fil
+</pre>
+
+<h3>
+<a href="filer/forenklet_vektorlag.zip">
+<img src="img/qgis/mAlgorithmSimplify.png" width="30" />
+Forenkla versjoner av vektorfilene </a>
+<pre style="white-space:normal;" class="tab">
+	Dette er en pakke med vektorfiler.
+	Disse har forenklet geometri.
+</pre>
+
+<br>
+<hr>
+<br>
+<!--- Kursoversikt --->
+
+<h3>
+<img src="img/qgis/mIconFieldDateTime.png" width="30" />
+<a href="../kursplan/index.html"><tt>Tid og sted</tt></a>
+<h4>
+
+<!--- Evalueringsskjema --->
+<h3>
+<img src="img/qgis/mIconSuccess.png" width="30" />
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdCL2AmIgktgr4FFUjCJsRJcJ8eQiNkdffhRmqVVPtcuhB70Q/viewform?usp=sf_link"><tt>Trykk her for å gå til evalueringsskjema.</tt></a>
+<!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSfAU3El1Ba4D8nHBEg0g7oDO7DeJ2gX8-xxrPC4atN9hngDnA/viewform"><tt>Trykk her for å gå til evalueringsskjema.</tt></a>-->
+<h4>
+
+	
+<br>
+
+
+
+<!--- Kontaktinformasjon --->
+
+
+<h3>
+<img src="img/qgis/user.png" width="30" />
+Anders Johan Konnestad
+<br><br>
+<h4>
+
+<table class="tab">
+<tr>
+ <td>Tlf.:</td>
+ <td>+47 977 22 320</td>
+</tr>
+
+
+<tr>
+ <td>E-post:</td>
+ <td>anders.konnestad@nmbu.no</td>
+</tr>
+
+
+<tr>
+ <td>Org.nr.:</td>
+ <td>922 612 072</td>
+</tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<!--- Konnestad consulting logo --->
+<br>
+<img src="img/logo/konnestad_logo2.svg" width="300" />
+
+<h3>
+Denne siden er driftet av Konnestad Consulting <br>
+
+&copy; Anders Johan Konnestad
+
+<br>
+<br>
+<hr>
+
+
+</body>
+
+
+
+         
